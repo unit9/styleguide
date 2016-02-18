@@ -11,7 +11,7 @@ UNIT9 Style Guide
 
 Table of contents:
 
-* [Tooling](##tooling)
+* [Tooling](#tooling)
 * [HTML](#html)
 * [CSS](#css)
 * [JavaScript](#javascript)
