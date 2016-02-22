@@ -14,9 +14,9 @@
   "license": "ISC",
   "homepage": "https://github.com/unit9/styleguide#readme",
   "devDependencies": {
-    "eslint": "^1.10.x",
-    "eslint-config-airbnb": "^5.0.x",
-    "eslint-plugin-react": "^3.16.x",
+    "eslint": "^2.2.x",
+    "eslint-config-airbnb": "^6.0.x",
+    "eslint-plugin-react": "^4.0.x",
     "postcss": "^5.0.x",
     "stylelint": "^4.3.x",
     "stylelint-config-suitcss": "^4.0.0"
