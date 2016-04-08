@@ -97,12 +97,12 @@ or sometimes [BEM](https://en.bem.info/):
 
 ### Formatting
 
-CSSfmt to automatically format files as it uses PostCSS.
+Stylefmt to automatically format files as it uses PostCSS.
 
 |Editor|Package|Installation|
 |:-----|:------|:-----------|
-|Sublime Text|[Sublime CSSfmt](https://github.com/dmnsgn/sublime-cssfmt)|`CSSfmt` via Package Manager|
-|Atom|[Language Grammar](https://github.com/1000ch/atom-cssfmt)|`apm install cssfmt`|
+|Sublime Text|[Sublime Stylefmt](https://github.com/dmnsgn/sublime-stylefmt)|`Stylefmt` via Package Manager|
+|Atom|[Language Grammar](https://github.com/1000ch/atom-stylefmt)|`apm install stylefmt`|
 
 ## JavaScript
 
