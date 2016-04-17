@@ -48,7 +48,7 @@ Code is linted on the fly inside the editor to which plugins are added:
 * [Sublime Linter](https://github.com/SublimeLinter/SublimeLinter3)
 * [Atom linter](https://atom.io/packages/linter)
 
-It requires projects to have the following dependencies: `npm install -D postcss stylelint stylelint-config-suitcss eslint eslint-config-airbnb eslint-plugin-react`. See below.
+It requires projects to have the following dependencies: `npm install -D postcss stylelint stylelint-config-suitcss  eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint`. See below.
 
 ## HTML
 
@@ -129,7 +129,7 @@ Definitions for ES201x JavaScript and React JSX syntax.
 
 |Editor|Plugin|Installation|
 |:-----|:-----|:-----------|
-|Sublime Text|[SublimeLinter-eslint](https://github.com/roadhump/SublimeLinter-eslint)|`SublimeLinter-eslint` via Package Manager + `npm install --save-dev eslint eslint-config-airbnb eslint-plugin-react`|
+|Sublime Text|[SublimeLinter-eslint](https://github.com/roadhump/SublimeLinter-eslint)|`SublimeLinter-eslint` via Package Manager + `npm install --save-dev eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint`|
 |Atom|[linter-eslint](https://atom.io/packages/linter-eslint)|`apm install linter-eslint` + `npm install --save-dev eslint eslint-config-airbnb eslint-plugin-react`|
 |...|[List of plugins](http://eslint.org/docs/user-guide/integrations#editors)||
 
