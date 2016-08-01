@@ -14,11 +14,26 @@
   "license": "ISC",
   "homepage": "https://github.com/unit9/styleguide#readme",
   "devDependencies": {
-    "eslint": "^2.2.x",
-    "eslint-config-airbnb": "^6.0.x",
-    "eslint-plugin-react": "^4.0.x",
-    "postcss": "^5.0.x",
-    "stylelint": "^4.3.x",
-    "stylelint-config-suitcss": "^4.0.0"
+    "eslint": "^3.2.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^5.2.2",
+    "postcss": "^5.1.1",
+    "stylelint": "^7.0.3",
+    "stylelint-config-suitcss": "^8.0.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-suitcss",
+    "rules": {}
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "comma-dangle": 0
+    }
   }
 }
