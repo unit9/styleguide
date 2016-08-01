@@ -60,7 +60,7 @@ It requires projects to have the following dependencies: `npm install -D postcss
 
 If required:
 
-* preprocessor: [JADE](http://jade-lang.com/)
+* preprocessor: [Pug](https://github.com/pugjs/pug)
 * templating engine: [Handlebars](http://handlebarsjs.com/)
 
 ## CSS
@@ -97,7 +97,7 @@ or sometimes [BEM](https://en.bem.info/):
 
 ### Formatting
 
-Stylefmt to automatically format files as it uses PostCSS.
+Stylefmt to automatically format files according to stylelint rules.
 
 |Editor|Package|Installation|
 |:-----|:------|:-----------|
