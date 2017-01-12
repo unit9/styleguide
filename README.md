@@ -48,7 +48,7 @@ Code is linted on the fly inside the editor to which plugins are added:
 * [Sublime Linter](https://github.com/SublimeLinter/SublimeLinter3)
 * [Atom linter](https://atom.io/packages/linter)
 
-It requires projects to have the following dependencies: `npm install -D postcss stylelint stylelint-config-suitcss  eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint`. See below.
+It requires projects to have the following dependencies: `npm i -D postcss stylelint stylelint-config-suitcss eslint eslint-config-airbnb eslint-plugin-import`. See below.
 
 ## HTML
 
@@ -129,8 +129,8 @@ Definitions for ES201x JavaScript and React JSX syntax.
 
 |Editor|Plugin|Installation|
 |:-----|:-----|:-----------|
-|Sublime Text|[SublimeLinter-eslint](https://github.com/roadhump/SublimeLinter-eslint)|`SublimeLinter-eslint` via Package Manager + `npm install --save-dev eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint`|
-|Atom|[linter-eslint](https://atom.io/packages/linter-eslint)|`apm install linter-eslint` + `npm install --save-dev eslint eslint-config-airbnb eslint-plugin-react`|
+|Sublime Text|[SublimeLinter-eslint](https://github.com/roadhump/SublimeLinter-eslint)|`SublimeLinter-eslint` via Package Manager + [NPM Packages](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb#usage)|
+|Atom|[linter-eslint](https://atom.io/packages/linter-eslint)|`apm install linter-eslint` + [NPM Packages](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb#usage)|
 |...|[List of plugins](http://eslint.org/docs/user-guide/integrations#editors)||
 
 ### Formatting
@@ -138,6 +138,7 @@ Definitions for ES201x JavaScript and React JSX syntax.
 All of the following solutions are not stable enough for a modern environment. Let's make the most out of linting.
 
 * [esformatter](https://github.com/millermedeiros/esformatter)
+* [prettier](https://github.com/jlongster/prettier)
 * [JsFormat](https://github.com/jdc0589/JsFormat) using jsbeautifier
 * [FixMyJS](https://github.com/jshint/fixmyjs) using JSHint
 * [JSCSFormatter](https://github.com/TheSavior/SublimeJSCSFormatter)
