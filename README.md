@@ -129,8 +129,8 @@ Definitions for ES201x JavaScript and React JSX syntax.
 
 |Editor|Plugin|Installation|
 |:-----|:-----|:-----------|
-|Sublime Text|[SublimeLinter-eslint](https://github.com/roadhump/SublimeLinter-eslint)|`SublimeLinter-eslint` via Package Manager + [NPM Packages](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb#usage)|
-|Atom|[linter-eslint](https://atom.io/packages/linter-eslint)|`apm install linter-eslint` + [NPM Packages](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb#usage)|
+|Sublime Text|[SublimeLinter-eslint](https://github.com/roadhump/SublimeLinter-eslint)|`SublimeLinter-eslint` via Package Manager + [NPM Packages](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base#usage)|
+|Atom|[linter-eslint](https://atom.io/packages/linter-eslint)|`apm install linter-eslint` + [NPM Packages](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base#usage)|
 |...|[List of plugins](http://eslint.org/docs/user-guide/integrations#editors)||
 
 ### Formatting
