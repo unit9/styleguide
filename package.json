@@ -1,6 +1,6 @@
 {
   "name": "unit9-styleguide",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "UNIT9's frontend styleguide",
   "repository": {
     "type": "git",
@@ -14,21 +14,32 @@
   "license": "ISC",
   "homepage": "https://github.com/unit9/styleguide#readme",
   "devDependencies": {
-    "eslint": "^3.13.1",
-    "eslint-config-airbnb-base": "^11.0.1",
-    "eslint-plugin-import": "^2.2.0",
-    "postcss": "^5.1.1",
-    "stylelint": "^7.0.3",
-    "stylelint-config-suitcss": "^8.0.0"
-  },
-  "stylelint": {
-    "extends": "stylelint-config-suitcss",
-    "rules": {}
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.7.2",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "prettier": "^1.7.0"
   },
   "eslintConfig": {
-    "extends": "airbnb-base",
-    "env": {
-      "browser": true
+    "parser": "babel-eslint",
+    "extends": [
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": false
+      }
     }
-  }
+  },
+  "eslintIgnore": [
+    "node_modules"
+  ]
 }

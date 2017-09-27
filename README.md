@@ -1,6 +1,8 @@
 UNIT9 Style Guide
 ================
 
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](#badge)
+
 > You can't run away <br>
 > From these styles I got, oh baby, hey baby <br>
 > Cause I got a lot, oh yeah <br>
@@ -11,22 +13,21 @@ UNIT9 Style Guide
 
 Table of contents:
 
-* [Tooling](#tooling)
-* [HTML](#html)
-* [CSS](#css)
-* [JavaScript](#javascript)
+* [Editor code style](#editor-code-style)
+* [Version control](#version-control)
+* [Code Formatting](#code-formatting)
+* [Code Linting](#code-linting)
+* [HTML & CSS](#html-css)
 
 ---
 
-## Tooling
-
-### Code formatting
+## Editor code style
 
 [EditorConfig](http://editorconfig.org/) is used to define indentation style and size, EOL, final new line, charset across a single project.
 
 > EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs.
 
-### Version control
+## Version control
 
 [The Art of the commit](http://alistapart.com/article/the-art-of-the-commit)
 > Be useful <br>
@@ -34,38 +35,102 @@ Table of contents:
 > Be consistent <br>
 > Use the active voice <br>
 
-[Git Flow](http://nvie.com/posts/a-successful-git-branching-model/)
+[Feature Branch](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow)
+> feature development encapsulated <br>
+> leverage pull requests <br>
+
+[Git Flow](https://www.atlassian.com/git/tutorials/comparing-workflows#gitflow-workflow)
 > master <br>
 > develop <br>
 > feature/ <br>
 > release/ <br>
 > hotfix/ <br>
 
-### Code linting
+## Code Formatting
 
-Code is linted on the fly inside the editor to which plugins are added:
+Use [Prettier](https://github.com/prettier/prettier):
+
+```bash
+npm i -D prettier
+```
+
+|Editor|Plugin|Installation|
+|:-----|:-----|:-----------|
+|Sublime Text|[SublimeJsPrettier](https://github.com/jonlabelle/SublimeJsPrettier)| `Prettier` via Package Manager|
+|Atom|[prettier-atom](https://github.com/prettier/prettier-atom)|`apm install prettier-atom`|
+|VSCode|[prettier-vscode](https://github.com/prettier/prettier-vscode)|`ext install prettier-vscode`|
+
+Prettier is an opinionated code formatter with support for:
+
+* JavaScript, including [ES2017](https://github.com/tc39/proposals/blob/master/finished-proposals.md)
+* [JSX](https://facebook.github.io/jsx/)
+* [Flow](https://flow.org/)
+* [TypeScript](https://www.typescriptlang.org/)
+* CSS, [LESS](http://lesscss.org/), and [SCSS](http://sass-lang.com)
+* [JSON](http://json.org/)
+* [GraphQL](http://graphql.org/)
+
+## Code Linting
+
+Install the linter:
 
 * [Sublime Linter](https://github.com/SublimeLinter/SublimeLinter3)
 * [Atom linter](https://atom.io/packages/linter)
 
-It requires projects to have the following dependencies: `npm i -D postcss stylelint stylelint-config-suitcss eslint eslint-config-airbnb eslint-plugin-import`. See below.
+Install the linter's plugins:
 
-## HTML
+|Editor|Plugin|Installation|
+|:-----|:-----|:-----------|
+|Sublime Text|[SublimeLinter-eslint](https://github.com/roadhump/SublimeLinter-eslint)| `SublimeLinter-contrib-eslint` via Package Manager|
+|Atom|[linter-eslint](https://github.com/AtomLinter/linter-eslint)|`apm install linter-eslint`|
+|VSCode|[vscode-eslint](https://github.com/Microsoft/vscode-eslint)|`ESLint from VS Code Marketplace`|
+
+Use [ESLint](https://eslint.org/):
+
+```bash
+npm i -D eslint
+```
+
+Configure [ESLint](https://eslint.org/) for [Prettier](https://github.com/prettier/prettier):
+
+* Use [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) as an ESLint rule:
+
+```bash
+npm i -D eslint-plugin-prettier
+```
+
+```json
+{
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+}
+```
+
+* Use [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) to disable all the existing formatting rules:
+
+```bash
+npm i -D eslint-config-prettier
+```
+
+```json
+{
+  "extends": [
+    "prettier"
+  ]
+}
+```
+
+See [package.json](./package.json).
+
+## HTML & CSS
 
 ### Conventions
 
 [HTML Codeguide](http://codeguide.co/#html)
-
-### Tooling
-
-If required:
-
-* preprocessor: [Pug](https://github.com/pugjs/pug)
-* templating engine: [Handlebars](http://handlebarsjs.com/)
-
-## CSS
-
-### Conventions
 
 [SUIT CSS](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md):
 
@@ -85,63 +150,6 @@ or sometimes [BEM](https://en.bem.info/):
 
 [normalize.css](https://necolas.github.io/normalize.css/)
 > Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.
-
-### Linting
-
-[Stylelint](https://github.com/stylelint/stylelint/) with this [SUITCSS config](https://github.com/stylelint/stylelint-config-suitcss) that can be [individually configured](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/rules.md).
-
-|Editor|Plugin|Installation|
-|:-----|:-----|:-----------|
-|Sublime Text|[SublimeLinter-contrib-stylelint](https://github.com/kungfusheep/SublimeLinter-contrib-stylelint)| `SublimeLinter-contrib-stylelint` via Package Manager|
-|Atom|[linter-stylelint](https://atom.io/packages/linter-stylelint)|`apm install linter-stylelint`|
-
-### Formatting
-
-Stylefmt to automatically format files according to stylelint rules.
-
-|Editor|Package|Installation|
-|:-----|:------|:-----------|
-|Sublime Text|[Sublime Stylefmt](https://github.com/dmnsgn/sublime-stylefmt)|`Stylefmt` via Package Manager|
-|Atom|[Language Grammar](https://github.com/1000ch/atom-stylefmt)|`apm install stylefmt`|
-
-## JavaScript
-
-### Conventions
-
-JavaScript Style Guides for ES5/React/ES201x:
-
-[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-
-`if CoffeeScript then` use this [guide](https://github.com/polarmobile/coffeescript-style-guide).
-
-### Syntax
-
-Definitions for ES201x JavaScript and React JSX syntax.
-
-|Editor|Package|Installation|
-|:-----|:------|:-----------|
-|Sublime Text|[Syntax definitions](https://github.com/babel/babel-sublime)|`Babel` via Package Manager|
-|Atom|[Language Grammar](https://atom.io/packages/language-babel)|`apm install language-babel`|
-
-### Linting
-
-[ESlint](http://eslint.org/) is the most complete solution for conforming to style guidelines and finding problematic patterns in JavaScript and JSX.
-
-|Editor|Plugin|Installation|
-|:-----|:-----|:-----------|
-|Sublime Text|[SublimeLinter-eslint](https://github.com/roadhump/SublimeLinter-eslint)|`SublimeLinter-eslint` via Package Manager + [NPM Packages](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base#usage)|
-|Atom|[linter-eslint](https://atom.io/packages/linter-eslint)|`apm install linter-eslint` + [NPM Packages](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base#usage)|
-|...|[List of plugins](http://eslint.org/docs/user-guide/integrations#editors)||
-
-### Formatting
-
-All of the following solutions are not stable enough for a modern environment. Let's make the most out of linting.
-
-* [esformatter](https://github.com/millermedeiros/esformatter)
-* [prettier](https://github.com/jlongster/prettier)
-* [JsFormat](https://github.com/jdc0589/JsFormat) using jsbeautifier
-* [FixMyJS](https://github.com/jshint/fixmyjs) using JSHint
-* [JSCSFormatter](https://github.com/TheSavior/SublimeJSCSFormatter)
 
 ---
 
